@@ -1,0 +1,1 @@
+SELECT team.team_name ,player_id,player_name,player_nickname,player_position,player_img FROM player JOIN team ON player.team_id = team.team_id WHERE player.player_name = '이상혁';
