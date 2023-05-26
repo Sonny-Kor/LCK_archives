@@ -2,7 +2,7 @@ const dbconf = {
   host: 'localhost',
   user: 'root',
   password: 'workspace!',
-  database: 'lckarchive'
+  database: 'lckarcive'
 }
 
 export default dbconf
