@@ -1,0 +1,44 @@
+.PlayerItem {
+  display: flex;
+  align-items: center;
+  border : 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+
+  .playerImage {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .playerInfo {
+    flex: 1;
+
+    .playerName {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .playerNickname {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .playerPosition {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .teamId {
+      font-size: 16px;
+      color: #666;
+    }
+  }
+}
