@@ -2,7 +2,9 @@ const dbconf = {
   host: 'localhost',
   user: 'root',
   password: 'workspace!',
-  database: 'lckarcive'
-}
+  database: 'lckarchive',
+};
 
-export default dbconf
+const jwtSecret = '123124';
+
+export { dbconf, jwtSecret };

@@ -1,11 +1,11 @@
 
 
-CREATE DATABASE LCKArcive 
+CREATE DATABASE LCKArchive 
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_general_ci;
 
 
-USE LCKArcive;
+USE LCKArchive;
 
 
 -- 팀(Team) 테이블
@@ -33,7 +33,7 @@ CREATE TABLE player (
 -- 경기(match) 테이블
 CREATE TABLE _match (
   match_id INT PRIMARY KEY AUTO_INCREMENT,
-  match_date DATETIME NOT NULL,
+  match_date DATE NOT NULL,
   team1_id INT,
   team1_score INT,
   team2_id INT,
