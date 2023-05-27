@@ -1,0 +1,34 @@
+.MatchPage{
+  .titleWrapper{
+    width: 50%;
+    height: min-content;
+    display: flex;
+    flex-grow: 0.3;
+    flex-direction: column;
+    border-bottom: 3px solid #FF4081;
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      color: #FF4081;;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: black;;
+    }
+  }
+  .contentWrapper{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: stretch;
+
+    
+  }
+}

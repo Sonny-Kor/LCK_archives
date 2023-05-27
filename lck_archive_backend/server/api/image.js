@@ -14,4 +14,12 @@ router.get('/:filename', (req, res) => {
   res.sendFile(imagePath);
 });
 
+router.get('/team/:filename', (req, res) => {
+  const { filename } = req.params;
+  const imagePath = path.resolve(__dirname, '..', 'images', 'TeamLogos', filename);
+
+  res.sendFile(imagePath);
+});
+
+
 export default router;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Header from '../../common/Component/Header/Header';
 import Content from '../../common/Component/Content/Content';

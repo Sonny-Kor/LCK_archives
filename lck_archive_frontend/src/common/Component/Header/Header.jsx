@@ -34,7 +34,7 @@ function Header(props) {
               className={`nav-item ${activeMenu === 'SCHEDULE' ? 'active' : ''}`}
               onClick={() => handleMenuClick('SCHEDULE')}
             >
-              SCHEDULE
+              MATCH
             </Link>
           </ul>
         </nav>

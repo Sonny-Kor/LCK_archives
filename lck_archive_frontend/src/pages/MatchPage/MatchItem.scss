@@ -1,0 +1,48 @@
+
+.MatchItem{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  &:hover{
+    background-color: #2222;
+  }
+  .item-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #1003A3;
+    gap: 16px;
+    align-items: center;
+    .logo-wrapper{
+      cursor: pointer;
+      box-sizing: border-box;
+      background-color: #d9d9d9;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      aspect-ratio: 16/ 9;
+      height: 70px;
+      .thumbnail {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .score {
+      font-size: 25px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .vs {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .Date {
+      font-size: 25px;
+      color: #999;
+    }
+  }
+  
+}
