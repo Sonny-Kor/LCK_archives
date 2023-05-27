@@ -1,0 +1,108 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 16px;
+  color: #1003A3;
+  z-index: 999;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item {
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1003A3;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item.active::after {
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+  .logoImg{
+    width: 90px;
+    cursor: pointer;
+  }
+}
+
+.navigation {
+  display: flex;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+}
+
+.nav-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  margin-right: 16px;
+  gap: 10px;
+  .login-button {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 24px;
+    &:hover {
+      background: #f0f0f0;
+    }
+    .accountCircle {
+      width: 24px;
+      height: 24px;
+      color: #0088ff;
+    }
+    .login {
+      height: 100%;
+      width: max-content;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #0088ff;
+    }
+  }
+}
+
