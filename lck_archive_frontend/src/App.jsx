@@ -5,6 +5,7 @@ import PlayerPage from './pages/PlayerPage/PlayerPage';
 import MatchPage from './pages/MatchPage/MatchPage';
 import Main from './pages/MainPage/MainPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import AdminPage from './pages/AdminPage/AdminPage';
 import './common/common.scss';
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/player" element={<PlayerPage />} />
           <Route path="/match" element={<MatchPage />} />
           <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/admin" element={<AdminPage/>}/>
         </Routes>
       </Router>
       

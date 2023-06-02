@@ -1,0 +1,67 @@
+.MatchModal {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    align-items: center;
+    justify-content: center;
+    .modaltitle{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .closeButton {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+   
+  }
+
+
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  input,select {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    &:focus{
+      outline:  2px solid #FF4081;
+    }
+  }
+  .fileInput{
+    border: none;
+  }
+
+
+  button {
+    background-color: #FF4081;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+}

@@ -12,6 +12,7 @@ db.connect((err) => {
   }
 });
 
+//모든 플레이어 출력
 router.get('/', (req, res) =>{
   const sql = `SELECT team.team_name ,player_id,player_name,player_nickname,player_position,player_img FROM player JOIN team ON player.team_id = team.team_id`;
   db.query(sql, (err, rows) => {
@@ -25,7 +26,7 @@ router.get('/', (req, res) =>{
     res.json(rows);
   });
 })
-
+// 플레이어 정보가져오기
 router.get('/:player_name', (req, res) => {
   const { player_name } = req.params;
   const query = 'SELECT team.team_name ,player_id,player_name,player_nickname,player_position,player_img FROM player JOIN team ON player.team_id = team.team_id WHERE player.player_name = ?';
@@ -43,10 +44,54 @@ router.get('/:player_name', (req, res) => {
   });
 });
 
+// 플레이어 삽입
+router.post('/insert/', verifyToken, (req, res) => {
+  const { player_name, player_nickname, player_img, player_position, team_id } = req.body;
+  const sql = `INSERT INTO player (player_name, player_nickname, player_img, player_position, team_id) VALUES (?, ?, ?, ?, ?)`;
+  const values = [player_name, player_nickname, player_img, player_position, team_id];
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      console.error('Error inserting player:', err);
+      res.status(500).json({ message: '플레이어 삽입 중 오류가 발생했습니다.' });
+    } else {
+      res.send('플레이어 삽입 성공했습니다.');
+    }
+  });
+});
 
-router.get('/', verifyToken, (req, res) => {
-  // 선수 목록 반환 로직 작성
-  res.send('선수 목록 API');
+// 플레이어 수정
+router.put('/update/:player_id', verifyToken, (req, res) => {
+  const { player_id } = req.params;
+  const { player_name, player_nickname, player_img, player_position, team_id } = req.body;
+  // 데이터베이스 업데이트 로직 작성
+  const sql = `UPDATE player SET player_name = ?, player_nickname = ?, player_img = ?, player_position = ?, team_id = ? WHERE player_id = ?`;
+  const values = [player_name, player_nickname, player_img, player_position, team_id, player_id];
+  
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      console.error('Error updating player:', err);
+      res.status(500).json({ message: '플레이어 업데이트 중 오류가 발생했습니다.' });
+    } else {
+      res.send('Player updated successfully.');
+    }
+  });
+});
+
+// 플레이어 삭제
+router.delete('/delete/:player_id', verifyToken, (req, res) => {
+  const { player_id } = req.params;
+
+  // 데이터베이스 삭제 로직 작성
+  const sql = `DELETE FROM player WHERE player_id = ?`;
+  
+  db.query(sql, [player_id], (err, result) => {
+    if (err) {
+      console.error('Error deleting player:', err);
+      res.status(500).json({ message: '플레이어 삭제 중 오류가 발생했습니다.' });
+    } else {
+      res.send('Player deleted successfully.');
+    }
+  });
 });
 
 export default router;

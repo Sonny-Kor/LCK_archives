@@ -4,7 +4,7 @@ import MatchItem from './MatchItem';
 import './MatchList.scss';
 
 function MatchList(props) {
-  const [MatchList, setMatchList] = useState([]);
+  const [MatchListData, setMatchList] = useState([]);
 
   const fetchMatchList = async () => {
     const response = await axios.get("http://localhost:3010/Match/");
@@ -13,11 +13,14 @@ function MatchList(props) {
 
   useEffect(() => {
     fetchMatchList();
+    
   }, []);
+
+
 
   return (
     <ul className="MatchList">
-      {MatchList.map((Match, index) => (
+      {MatchListData.map((Match, index) => (
         <MatchItem
           key={Match.Match_id}
           match_data={Match.match_data}

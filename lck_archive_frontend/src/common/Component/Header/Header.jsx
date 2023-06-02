@@ -32,14 +32,16 @@ function Header(props) {
             <Link
               to="/player"
               className={`nav-item ${activeMenu === 'PLAYER' ? 'active' : ''}`}
-              onClick={() => handleMenuClick('PLAYER')}
+              onMouseOver={() => handleMenuClick('PLAYER')}
+              onMouseOut={()=> handleMenuClick('')}
             >
               PLAYER
             </Link>
             <Link
               to="/team"
               className={`nav-item ${activeMenu === 'TEAMS' ? 'active' : ''}`}
-              onClick={() => handleMenuClick('TEAMS')}
+              onMouseOver={() => handleMenuClick('TEAMS')}
+              onMouseOut={()=> handleMenuClick('')}
             >
               TEAMS
             </Link>
@@ -48,7 +50,8 @@ function Header(props) {
               className={`nav-item ${
                 activeMenu === 'SCHEDULE' ? 'active' : ''
               }`}
-              onClick={() => handleMenuClick('SCHEDULE')}
+              onMouseOver={() => handleMenuClick('SCHEDULE')}
+              onMouseOut={()=> handleMenuClick('')}
             >
               MATCH
             </Link>

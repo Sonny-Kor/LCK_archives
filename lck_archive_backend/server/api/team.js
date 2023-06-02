@@ -50,9 +50,44 @@ router.get('/:team_name', (req, res) => {
 
 
 
-router.get('/insert/', verifyToken, (req, res) => {
-  // 팀 목록 반환 로직 작성
-  res.send('팀 목록 API');
+router.post('/insert/', verifyToken, (req, res) => {
+  const {team_name, team_logo} = req.body;
+  const query = 'INSERT INTO team (team_name, team_logo) VALUES (?, ?)';
+  const values = [team_name, team_logo];
+  db.query(query, values, (err, result) => {
+    if (err) {
+      console.error('Error executing query:', err);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+    res.status(200).json({ message: '성공적으로 저장되었습니다.' });
+  })
+});
+
+router.put('/update/:team_id', verifyToken, (req, res) => {
+  const { team_id } = req.params;
+  const { new_team_name, team_logo } = req.body;
+  const query = `UPDATE team SET team_name = ?, team_logo = ? WHERE team_id = ?`;
+  db.query(query, [new_team_name, team_logo, team_id], (err, result) => {
+    if (err) {
+      console.error('Error executing query:', err);
+      res.status(500).send('Internal Server Error');
+      return;
+    }    res.status(200).json({ message: '성공적으로 저장되었습니다.' });
+  })
+});
+
+router.delete('/delete/:team_id', verifyToken, (req, res) => {
+  const { team_id } = req.params;
+  const query = 'DELETE FROM team WHERE team_id = ?';
+  db.query(query, [team_id], (err, result) => {
+    if (err) {
+      console.error('Error executing query:', err);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+    res.status(200).json({ message: '성공적으로 삭제되었습니다.' });
+  })
 });
 
 export default router;

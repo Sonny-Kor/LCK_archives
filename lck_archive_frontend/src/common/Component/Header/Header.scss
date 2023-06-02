@@ -26,7 +26,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #1003a3;
+  background-color: #FF4081;
   transition: width 0.3s ease-in-out;
 }
 .nav-item.active::after {
@@ -125,6 +125,7 @@
         flex-direction: row;
         gap: 10px;
         border: none;
+        color: black;
         background: #ffffff;
         cursor: pointer;
         border-radius: 16px;
