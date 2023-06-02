@@ -8,7 +8,7 @@
   justify-content: space-between;
   background-color: #fff;
   padding: 16px;
-  color: #1003A3;
+  color: #1003a3;
   z-index: 999;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -26,7 +26,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #1003A3;
+  background-color: #1003a3;
   transition: width 0.3s ease-in-out;
 }
 .nav-item.active::after {
@@ -42,7 +42,7 @@
   font-size: 24px;
   margin-left: 16px;
   margin-right: 16px;
-  .logoImg{
+  .logoImg {
     width: 90px;
     cursor: pointer;
   }
@@ -65,13 +65,77 @@
 }
 
 .right-section {
+  box-sizing: border-box;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding: 0px 16px;
-  margin-right: 16px;
-  gap: 10px;
+  margin-right: 30px;
+  padding: 12px 16px;
+  gap: 40px;
+  .myProfileBtnWrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .myProfileBtn {
+      background-color: rgb(112, 38, 156);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .myProfileWrapper {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: max-content;
+      top: 0px;
+      right: 35px;
+      border: 1px solid #ffffff;
+      box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      background: #ffffff;
+      justify-content: center;
+      color: black;
+
+      padding: 5px 0px;
+      .adminBtn {
+        display: flex;
+        padding: 5px;
+        flex-direction: row;
+        gap: 10px;
+        border: none;
+        background: #ffffff;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+      .logoutBtn {
+        display: flex;
+        padding: 5px;
+        flex-direction: row;
+        gap: 10px;
+        border: none;
+        background: #ffffff;
+        cursor: pointer;
+        border-radius: 16px;
+        align-items: center;
+        text-decoration: none;
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+    }
+  }
   .login-button {
     box-sizing: border-box;
     cursor: pointer;
@@ -95,7 +159,7 @@
       height: 100%;
       width: max-content;
 
-      font-family: "Inter";
+      font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -105,4 +169,3 @@
     }
   }
 }
-

@@ -16,6 +16,9 @@ body {
     text-align: center;
     text-decoration: none; /* 링크의 밑줄 제거 */
     color: inherit; /* 링크의 색상 제거 */
+    
+    &:visited { color: black; text-decoration: none};
   }
   box-sizing: border-box;
+
 }
