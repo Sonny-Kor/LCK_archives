@@ -287,11 +287,11 @@ function AdminPage(props) {
                 onChange={(e) => setPlayerPosition(e.target.value)}
               >
                 <option value="">플레이어 포지션 선택</option>
-                <option value="탑">TOP</option>
-                <option value="정글">JUG</option>
-                <option value="미드">MID</option>
-                <option value="원딜">AD</option>
-                <option value="서포터">SUP</option>
+                <option value="TOP">TOP</option>
+                <option value="JUG">JUG</option>
+                <option value="MID">MID</option>
+                <option value="AD">AD</option>
+                <option value="SUP">SUP</option>
               </select>
               <select
                 value={teamId} // Changed to teamId

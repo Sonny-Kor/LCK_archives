@@ -1,7 +1,6 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import { verifyToken } from '../middleware/auth.js';
 import fs from "fs"
 import multer from "multer"
 

@@ -49,7 +49,6 @@ function MatchModal({
 
 
   const handleMatchAdd = async () => {
-    // console.log(teamId, teamId2, team1_score, team2_score, matchdate)
     try {
       const token = getCookie("access_token");
 
