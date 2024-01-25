@@ -3,7 +3,10 @@
 
 
 ## 개발 일지
-[Figma][https://www.figma.com/file/URR8HJnIyLBXJHLeFMJ7qt/LCK-Arcive?type=design&node-id=0%3A1&mode=design&t=g5ZHMszYrhzQHgHg-1]
+
+### FRONT 초기 UI
+[Figma Link](https://www.figma.com/file/URR8HJnIyLBXJHLeFMJ7qt/LCK-Arcive?type=design&node-id=0%3A1&mode=design&t=g5ZHMszYrhzQHgHg-1)
+
 
 ### 구성도
 <img width="745" alt="image" src="https://github.com/Sonny-Kor/LCK_archives/assets/46300191/6a7d2c8c-b623-4625-b840-74b969bba861">
